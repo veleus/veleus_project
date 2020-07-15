@@ -1,0 +1,12 @@
+import pyglet
+import os
+def logan():
+    directory=(r"C:\Users\Nikita\Desktop\zvon")
+    files = os.listdir(directory)
+    for i in files:
+        print(i)
+    mus=input("Введите трек который вы хотите послушать: ")
+    song = pyglet.media.load(f"C:\\Users\\Nikita\\Desktop\\zvon\\{mus}")
+    song.play()
+    pyglet.app.run()
+logan()
